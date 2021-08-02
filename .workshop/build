@@ -8,6 +8,11 @@
 # it is out of view of the user doing the workshop and they aren't likely to
 # delete it by accident and break the display of the workshop content.
 
+curl -kLs https://mirror.openshift.com/pub/openshift-v4/clients/odo/v1.1.0/odo-linux-amd64 -o /opt/app-root/bin/odo-v1.1.0
+chmod 755 /opt/app-root/bin/odo-v1.1.0
+
+/opt/app-root/bin/odo-v1.1.0 preference set UpdateNotification false
+
 mv workshop /opt/app-root/workshop
 mv envvars /opt/app-root/envvars
 
